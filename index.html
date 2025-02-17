@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>EDAIJobSelecion</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://db.onlinewebfonts.com/c/89248b0583721153668df86453b579de?family=Halyard+Text+Regular" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/radio.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+<body>
+    <div class="form-container">
+        <div class="form-content">
+            <header>EDAI Job Selection</header>
+            <div class="content-body">
+                <form action="/">
+                    <div class="flex-column">
+                        <label for="jobname">Job Name</label>
+                        <input type="text" id="jobname" name="jobname" placeholder="">
+                    </div>
+                    <div class="flex-column" style="margin-top: 10px;">
+                        <label for="copysetting">Copy Settings from Previous Job</label>
+                        <div class="custom-select" id="copysetting" name="copysetting">
+                            <div class="select-header" onclick="toggleDropdown('copysetting')">
+                                <span></span>
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="select-options" id="selectOptions">
+                                <div class="option" onclick="selectOption('Job 1 - jkdhcgufabmg5ggu7cn', 'copysetting')">Job 1 - jkdhcgufabmg5ggu7cn</div>
+                                <div class="option" onclick="selectOption('Job 2 - jba5wzd77ygdrfbu5cd', 'copysetting')">Job 2 - jba5wzd77ygdrfbu5cd</div>
+                                <div class="option" onclick="selectOption('Job 3 - jhcbkp2wktaw9bpefpu', 'copysetting')">Job 3 - jhcbkp2wktaw9bpefpu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-column" style="margin-top: 10px;">
+                        <label for="typeofjob">What Type of Job Would You Like to Submit?</label>
+                        <div id="typeofjob" name="typeofjob">
+                            <label class="radio-container">Relevance
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container">Privilege
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container">PII Detection
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container">PII Extraction
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-container">Early Case Insights
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div style="margin-top: 20px;">
+                        <div id="relevance" class="form">
+                            <div class="form-subtitle">Relevance</div>
+                            <div class="flex-column" style="gap: 40px;">
+                                <div class="flex-column" style="gap: 20px;">
+                                    <div class="form-subtitle" style="margin-bottom: 0;">Issue 1</div>
+                                    <div class="flex-column">
+                                        <label for="issue1name">Name</label>
+                                        <input type="text" id="issue1name" name="issue1name" placeholder="">
+                                    </div>
+                                    <div class="flex-column">
+                                        <label for="issue1text">Text</label>
+                                        <textarea id="issue1text" name="issue1text" placeholder="" rows="2"></textarea>
+                                    </div>
+                                    <div class="flex-column">
+                                        <label for="issue1field">Field for Results</label>
+                                        <div class="custom-select" id="issue1field" name="issue1field">
+                                            <div class="select-header" onclick="toggleDropdown('issue1field')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Responsiveness', 'issue1field')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Privilege', 'issue1field')">Privilege</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'issue1field')">Issue 1</div>
+                                                <div class="option" onclick="selectOption('Issue 2', 'issue1field')">Issue 2</div>
+                                                <div class="option" onclick="selectOption('Issue 3', 'issue1field')">Issue 3</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column" style="gap: 20px;">
+                                    <div class="form-subtitle" style="margin-bottom: 0;">Issue 2</div>
+                                    <div class="flex-column">
+                                        <label for="issue2name">Name</label>
+                                        <input type="text" id="issue2name" name="issue2name" placeholder="">
+                                    </div>
+                                    <div class="flex-column">
+                                        <label for="issue2text">Text</label>
+                                        <textarea id="issue2text" name="issue2text" placeholder="" rows="2"></textarea>
+                                    </div>
+                                    <div class="flex-column">
+                                        <label for="issue2field">Field for Results</label>
+                                        <div class="custom-select" id="issue2field" name="issue2field">
+                                            <div class="select-header" onclick="toggleDropdown('issue2field')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Responsiveness', 'issue2field')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Privilege', 'issue2field')">Privilege</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'issue2field')">Issue 1</div>
+                                                <div class="option" onclick="selectOption('Issue 2', 'issue2field')">Issue 2</div>
+                                                <div class="option" onclick="selectOption('Issue 3', 'issue2field')">Issue 3</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column" style="gap: 20px;">
+                                    <div class="form-subtitle" style="margin-bottom: 0;">Issue 3</div>
+                                    <div class="flex-column">
+                                        <label for="issue3name">Name</label>
+                                        <input type="text" id="issue3name" name="issue3name" placeholder="">
+                                    </div>
+                                    <div class="flex-column">
+                                        <label for="issue2text">Text</label>
+                                        <textarea id="issue2text" name="issue2text" placeholder="" rows="2"></textarea>
+                                    </div>
+                                    <div class="flex-column">
+                                        <label for="issue3field">Field for Results</label>
+                                        <div class="custom-select" id="issue3field" name="issue3field">
+                                            <div class="select-header" onclick="toggleDropdown('issue3field')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options1" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Responsiveness', 'issue3field')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Privilege', 'issue3field')">Privilege</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'issue3field')">Issue 1</div>
+                                                <div class="option" onclick="selectOption('Issue 2', 'issue3field')">Issue 2</div>
+                                                <div class="option" onclick="selectOption('Issue 3', 'issue3field')">Issue 3</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="pdfhandling">PDF Handling</label>
+                                    <div name="pdfhandling">
+                                        <label class="checkbox-container">Review PDFs as Images
+                                            <input type="checkbox">
+                                            <span class="box-checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    
+                        <div id="privilege" class="form">
+                            <div class="form-subtitle">Privilege</div>
+                            <div class="flex-column" style="gap: 20px;">
+                                <div class="flex-column">
+                                    <label for="privilegetype">Privilege Types</label>
+                                    <div>
+                                        <div name="pdfhandling">
+                                            <label class="checkbox-container">Attorney-Client
+                                                <input type="checkbox">
+                                                <span class="box-checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div name="pdfhandling">
+                                            <label class="checkbox-container">Work Product
+                                                <input type="checkbox">
+                                                <span class="box-checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div name="pdfhandling">
+                                            <label class="checkbox-container">Custom Type
+                                                <input type="checkbox">
+                                                <span class="box-checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="privilegename">Custom Privilege Name</label>
+                                    <input type="text" id="privilegename" name="privilegename" placeholder="">
+                                </div>
+                                <div class="flex-column">
+                                    <label for="privilegeprompt">Custom Privilege Prompt</label>
+                                    <textarea id="privilegeprompt" name="privilegeprompt" placeholder="" rows="2"></textarea>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-column attorney-width">
+                                        <label for="attorney">Attorney List</label>
+                                        <textarea id="attorney" name="attorney" placeholder="" rows="2"></textarea>
+                                    </div>
+                                    <div class="flex-column attorney-width">
+                                        <label for="safedomain">Safe Domains</label>
+                                        <textarea id="safedomain" name="safedomain" placeholder="" rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-column attorney-width">
+                                        <label for="classification">Privilege Classification Result</label>
+                                        <div class="custom-select" id="classification" name="classification">
+                                            <div class="select-header" onclick="toggleDropdown('classification')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Privileged', 'classification')">Privileged</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'classification')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'classification')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column attorney-width">
+                                        <label for="explanation">Privilege Explanation Result</label>
+                                        <div class="custom-select" id="explanation" name="explanation">
+                                            <div class="select-header" onclick="toggleDropdown('explanation')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Privileged', 'explanation')">Privileged</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'explanation')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'explanation')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-column attorney-width">
+                                        <label for="typeresult">Privilege Type Result</label>
+                                        <div class="custom-select" id="typeresult" name="typeresult">
+                                            <div class="select-header" onclick="toggleDropdown('typeresult')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Privileged', 'typeresult')">Privileged</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'typeresult')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'typeresult')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column attorney-width">
+                                        <label for="logentry">Privilege Log Entry</label>
+                                        <div class="custom-select" id="logentry" name="logentry">
+                                            <div class="select-header" onclick="toggleDropdown('logentry')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Privileged', 'logentry')">Privileged</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'logentry')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'logentry')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="hitresult">Attorney Hit Result</label>
+                                    <div class="custom-select" id="hitresult" name="hitresult">
+                                        <div class="select-header" onclick="toggleDropdown('hitresult')">
+                                            <span></span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="select-options1" id="selectOptions">
+                                            <div class="option" onclick="selectOption('Privileged', 'hitresult')">Privileged</div>
+                                            <div class="option" onclick="selectOption('Responsiveness', 'hitresult')">Responsiveness</div>
+                                            <div class="option" onclick="selectOption('Issue 1', 'hitresult')">Issue 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div id="detection" class="form">
+                            <div class="form-subtitle">PII Detection</div>
+                            <div class="flex-column" style="gap: 20px;">
+                                <div class="flex-column">
+                                    <label for="detectiontemplate">PII Template to Use</label>
+                                    <div class="custom-select" id="detectiontemplate" name="detectiontemplate">
+                                        <div class="select-header" onclick="toggleDropdown('detectiontemplate')">
+                                            <span></span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="select-options" id="selectOptions">
+                                            <div class="option" onclick="selectOption('PII Template 1', 'detectiontemplate')">PII Template 1</div>
+                                            <div class="option" onclick="selectOption('PII Template 2', 'detectiontemplate')">PII Template 2</div>
+                                            <div class="option" onclick="selectOption('PII Template 3', 'detectiontemplate')">PII Template 3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="detectionfield">Field for Results</label>
+                                    <div class="custom-select" id="detectionfield" name="detectionfield">
+                                        <div class="select-header" onclick="toggleDropdown('detectionfield')">
+                                            <span></span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="select-options1" id="selectOptions">
+                                            <div class="option" onclick="selectOption('PII Template 1', 'detectionfield')">PII Template 1</div>
+                                            <div class="option" onclick="selectOption('PII Template 2', 'detectionfield')">PII Template 2</div>
+                                            <div class="option" onclick="selectOption('PII Template 3', 'detectionfield')">PII Template 3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>           
+                        </div>
+                        <div id="extraction" class="form">
+                            <div class="form-subtitle">PII Extracion</div>
+                            <div class="flex-column" style="gap: 20px;">
+                                <div class="flex-column">
+                                    <label for="extractiontemplate">PII Template to Use</label>
+                                    <div class="custom-select" id="extractiontemplate" name="extractiontemplate">
+                                        <div class="select-header" onclick="toggleDropdown('extractiontemplate')">
+                                            <span></span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="select-options" id="selectOptions">
+                                            <div class="option" onclick="selectOption('PII Template 1', 'extractiontemplate')">PII Template 1</div>
+                                            <div class="option" onclick="selectOption('PII Template 2', 'extractiontemplate')">PII Template 2</div>
+                                            <div class="option" onclick="selectOption('PII Template 3', 'extractiontemplate')">PII Template 3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="extractionfield">Field for Results</label>
+                                    <div class="custom-select" id="extractionfield" name="extractionfield">
+                                        <div class="select-header" onclick="toggleDropdown('extractionfield')">
+                                            <span></span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="select-options1" id="selectOptions">
+                                            <div class="option" onclick="selectOption('PII Results', 'extractionfield')">PII Results</div>
+                                            <div class="option" onclick="selectOption('Relevance Issues', 'extractionfield')">Relevance Issues</div>
+                                            <div class="option" onclick="selectOption('Multichoice Field 1', 'extractionfield')">Multichoice Field 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>           
+                        </div>
+                        <div id="extraction" class="form">
+                            <div class="form-subtitle">Early Case Insights</div>
+                            <div class="flex-column" style="gap: 20px;">
+                                <div class="flex-column">
+                                    <label for="casebackground">Case Background</label>
+                                    <textarea id="casebackground" name="casebackground" placeholder="" rows="2"></textarea>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="documentwant">Documents You Want</label>
+                                    <textarea id="documentwant" name="documentwant" placeholder="" rows="2"></textarea>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="documentnotwant">Documents You Do Not  Want</label>
+                                    <textarea id="documentnotwant" name="documentnotwant" placeholder="" rows="2"></textarea>
+                                </div>
+                            </div>           
+                        </div>
+                    </div>
+    
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <script src="js/select.js"></script>
+    <script src="js/radio.js"></script>
+    <script>
+        document.getElementById("submit").addEventListener("click", (event) => {
+            event.preventDefault();
+            alert("Sent successfully!");
+        })
+    </script>
+</body>
+</html>

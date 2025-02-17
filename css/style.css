@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #77777;
+    --secondary-color: #4B3AF5;
+    --text-grey: #777777;
+    --text-dark: #231F20;
+    --font-size: 16px;
+    --color-grey: #D8D8D8;
+    --form-width: 800px;
+    --page__margin: 40px auto auto;
+    --label__font-size: 20px;
+    --input__border: 1px solid var(--color-grey);
+}
+
+html {
+    font-family: "Halyard Text Regular";
+}
+
+body {
+    margin: 0;
+}
+
+label {
+    font-size: var(--label__font-size);
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flex {
+    display: flex;
+    gap: 25px;
+}
+
+.attorney-width {
+    width: 50%;
+}
+
+.form-container {
+    max-width: var(--form-width);
+    margin: var(--page__margin);
+    font-size: var(--font-size);
+    color: var(--text-dark);
+}
+
+.form-content header {
+    padding-top: 40px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.content-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 40px;
+}
+
+input[type="text"], textarea {
+    background-color: white;
+    color: var(--text-grey);
+    font-size: 16px;
+    border: var(--input__border);
+    border-radius: 4px;
+    padding: 12px;
+    outline: none;
+}
+
+#typeofjob label {
+    font-size: 16px;
+    color: var(--text-grey);
+    font-weight: normal;
+}
+
+input[type="submit"] {
+    width: 120px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.form-subtitle {
+    font-size: 22px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 860px) {
+    .form-container {
+        margin-top: 0;
+    }
+    .attorney-width {
+        width: 100%;
+    }
+    .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

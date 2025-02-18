@@ -36,6 +36,18 @@ label {
     gap: 25px;
 }
 
+.add-issue {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px; 
+    padding: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
 .attorney-width {
     width: 50%;
 }
@@ -87,8 +99,7 @@ input[type="submit"] {
     font-size: 20px;
     border: none;
     border-radius: 4px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-block: 40px;
     padding: 12px;
     cursor: pointer;
     outline: none;

@@ -55,7 +55,7 @@
                                 <input type="radio" name="radio">
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="radio-container">Early Case Insights
+                            <label class="radio-container">Early Case Intelligence
                                 <input type="radio" name="radio">
                                 <span class="checkmark"></span>
                             </label>
@@ -65,7 +65,7 @@
                     <div style="margin-top: 20px;">
                         <div id="relevance" class="form">
                             <div class="form-subtitle">Relevance</div>
-                            <div class="flex-column" style="gap: 40px;">
+                            <div id="issues" class="flex-column" style="gap: 40px;">
                                 <div class="flex-column" style="gap: 20px;">
                                     <div class="form-subtitle" style="margin-bottom: 0;">Issue 1</div>
                                     <div class="flex-column">
@@ -93,61 +93,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex-column" style="gap: 20px;">
-                                    <div class="form-subtitle" style="margin-bottom: 0;">Issue 2</div>
-                                    <div class="flex-column">
-                                        <label for="issue2name">Name</label>
-                                        <input type="text" id="issue2name" name="issue2name" placeholder="">
-                                    </div>
-                                    <div class="flex-column">
-                                        <label for="issue2text">Text</label>
-                                        <textarea id="issue2text" name="issue2text" placeholder="" rows="2"></textarea>
-                                    </div>
-                                    <div class="flex-column">
-                                        <label for="issue2field">Field for Results</label>
-                                        <div class="custom-select" id="issue2field" name="issue2field">
-                                            <div class="select-header" onclick="toggleDropdown('issue2field')">
-                                                <span></span>
-                                                <div class="arrow"></div>
-                                            </div>
-                                            <div class="select-options" id="selectOptions">
-                                                <div class="option" onclick="selectOption('Responsiveness', 'issue2field')">Responsiveness</div>
-                                                <div class="option" onclick="selectOption('Privilege', 'issue2field')">Privilege</div>
-                                                <div class="option" onclick="selectOption('Issue 1', 'issue2field')">Issue 1</div>
-                                                <div class="option" onclick="selectOption('Issue 2', 'issue2field')">Issue 2</div>
-                                                <div class="option" onclick="selectOption('Issue 3', 'issue2field')">Issue 3</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div>                                
+                                <div style="display: flex; justify-content: end;">
+                                    <div class="add-issue">+ Add Issue</div>
                                 </div>
-                                <div class="flex-column" style="gap: 20px;">
-                                    <div class="form-subtitle" style="margin-bottom: 0;">Issue 3</div>
-                                    <div class="flex-column">
-                                        <label for="issue3name">Name</label>
-                                        <input type="text" id="issue3name" name="issue3name" placeholder="">
-                                    </div>
-                                    <div class="flex-column">
-                                        <label for="issue2text">Text</label>
-                                        <textarea id="issue2text" name="issue2text" placeholder="" rows="2"></textarea>
-                                    </div>
-                                    <div class="flex-column">
-                                        <label for="issue3field">Field for Results</label>
-                                        <div class="custom-select" id="issue3field" name="issue3field">
-                                            <div class="select-header" onclick="toggleDropdown('issue3field')">
-                                                <span></span>
-                                                <div class="arrow"></div>
-                                            </div>
-                                            <div class="select-options1" id="selectOptions">
-                                                <div class="option" onclick="selectOption('Responsiveness', 'issue3field')">Responsiveness</div>
-                                                <div class="option" onclick="selectOption('Privilege', 'issue3field')">Privilege</div>
-                                                <div class="option" onclick="selectOption('Issue 1', 'issue3field')">Issue 1</div>
-                                                <div class="option" onclick="selectOption('Issue 2', 'issue3field')">Issue 2</div>
-                                                <div class="option" onclick="selectOption('Issue 3', 'issue3field')">Issue 3</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex-column">
+                                <div class="flex-column" style="margin-top: 40px;">
                                     <label for="pdfhandling">PDF Handling</label>
                                     <div name="pdfhandling">
                                         <label class="checkbox-container">Review PDFs as Images
@@ -346,7 +297,7 @@
                             </div>           
                         </div>
                         <div id="extraction" class="form">
-                            <div class="form-subtitle">Early Case Insights</div>
+                            <div class="form-subtitle">Early Case Intelligence</div>
                             <div class="flex-column" style="gap: 20px;">
                                 <div class="flex-column">
                                     <label for="casebackground">Case Background</label>
@@ -359,6 +310,81 @@
                                 <div class="flex-column">
                                     <label for="documentnotwant">Documents You Do Not  Want</label>
                                     <textarea id="documentnotwant" name="documentnotwant" placeholder="" rows="2"></textarea>
+                                </div>
+
+                                <div class="flex">
+                                    <div class="flex-column attorney-width">
+                                        <label for="earlyclassification">Classification Results</label>
+                                        <div class="custom-select" id="earlyclassification" name="earlyclassification">
+                                            <div class="select-header" onclick="toggleDropdown('earlyclassification')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Early Case', 'earlyclassification')">Early Case</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'earlyclassification')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'earlyclassification')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column attorney-width">
+                                        <label for="summaryresult">Summary Results</label>
+                                        <div class="custom-select" id="summaryresult" name="summaryresult">
+                                            <div class="select-header" onclick="toggleDropdown('summaryresult')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Early Case', 'summaryresult')">Early Case</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'summaryresult')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'summaryresult')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-column attorney-width">
+                                        <label for="earlytyperesult">Document Type Result</label>
+                                        <div class="custom-select" id="earlytyperesult" name="earlytyperesult">
+                                            <div class="select-header" onclick="toggleDropdown('earlytyperesult')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Early Case', 'earlytyperesult')">Early Case</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'earlytyperesult')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'earlytyperesult')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column attorney-width">
+                                        <label for="earlytopicresult">Document Topic Results</label>
+                                        <div class="custom-select" id="earlytopicresult" name="earlytopicresult">
+                                            <div class="select-header" onclick="toggleDropdown('earlytopicresult')">
+                                                <span></span>
+                                                <div class="arrow"></div>
+                                            </div>
+                                            <div class="select-options" id="selectOptions">
+                                                <div class="option" onclick="selectOption('Early Case', 'earlytopicresult')">Early Case</div>
+                                                <div class="option" onclick="selectOption('Responsiveness', 'earlytopicresult')">Responsiveness</div>
+                                                <div class="option" onclick="selectOption('Issue 1', 'earlytopicresult')">Issue 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-column">
+                                    <label for="inappropriate">Inappropriate Content Results</label>
+                                    <div class="custom-select" id="inappropriate" name="inappropriate">
+                                        <div class="select-header" onclick="toggleDropdown('inappropriate')">
+                                            <span></span>
+                                            <div class="arrow"></div>
+                                        </div>
+                                        <div class="select-options1" id="selectOptions">
+                                            <div class="option" onclick="selectOption('Early Case', 'inappropriate')">Early Case</div>
+                                            <div class="option" onclick="selectOption('Responsiveness', 'inappropriate')">Responsiveness</div>
+                                            <div class="option" onclick="selectOption('Issue 1', 'inappropriate')">Issue 1</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>           
                         </div>
@@ -373,6 +399,54 @@
     <script src="js/select.js"></script>
     <script src="js/radio.js"></script>
     <script>
+        var issue_index = 1;
+        document.querySelector(".add-issue").addEventListener("click", function(){
+            if (issue_index == 14) {
+                document.querySelector(".add-issue").style.display = "none";
+            }
+            while (issue_index < 15) {
+                issue_index++;
+                addIssue(issue_index);
+                break;
+            }
+        });
+
+        function addIssue(issue_index) {
+            let issue = document.createElement("div");
+            issue.classList.add("flex-column");
+            issue.style.gap = "20px";
+            issue.innerHTML = `
+                <div class="form-subtitle" style="margin-bottom: 0;">Issue ${issue_index}</div>
+                <div class="flex-column">
+                    <label for="issue${issue_index}name">Name</label>
+                    <input type="text" id="issue${issue_index}name" name="issue${issue_index}name" placeholder="">
+                </div>
+                <div class="flex-column">
+                    <label for="issue${issue_index}text">Text</label>
+                    <textarea id="issue${issue_index}text" name="issue${issue_index}text" placeholder="" rows="${issue_index}"></textarea>
+                </div>
+                <div class="flex-column">
+                    <label for="issue${issue_index}field">Field for Results</label>
+                    <div class="custom-select" id="issue${issue_index}field" name="issue${issue_index}field">
+                        <div class="select-header" onclick="toggleDropdown('issue${issue_index}field')">
+                            <span></span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="select-options" id="selectOptions">
+                            <div class="option" onclick="selectOption('Responsiveness', 'issue${issue_index}field')">Responsiveness</div>
+                            <div class="option" onclick="selectOption('Privilege', 'issue${issue_index}field')">Privilege</div>
+                            <div class="option" onclick="selectOption('Issue 1', 'issue${issue_index}field')">Issue 1</div>
+                            <div class="option" onclick="selectOption('Issue 2', 'issue${issue_index}field')">Issue 2</div>
+                            <div class="option" onclick="selectOption('Issue 3', 'issue${issue_index}field')">Issue 3</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.getElementById("issues").appendChild(issue);
+        }
+
+
+
         document.getElementById("submit").addEventListener("click", (event) => {
             event.preventDefault();
             alert("Sent successfully!");
